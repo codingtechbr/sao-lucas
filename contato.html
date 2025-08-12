@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | MedCenter - Clínica de Especialidades Médicas</title>
+    <meta name="description" content="Entre em contato com a MedCenter. Agende consultas, tire dúvidas ou solicite informações sobre nossos serviços médicos.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                 <img class="logo" src="imagens/logo.png" alt="" width="50%">
+                    <p class="bordao">Saúde e Qualidadeao seu alcance</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="index.html#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="contato.html" class="nav-link active">Contato</a></li>
+                    </ul>
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <div class="contact-hero-content">
+                    <h1>Entre em Contato</h1>
+                    <p>Estamos aqui para ajudar você. Entre em contato conosco para agendar consultas, tirar dúvidas ou obter mais informações sobre nossos serviços.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <h2>Envie sua mensagem</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nome completo *</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Assunto</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="consulta">Agendar Consulta</option>
+                                    <option value="exame">Agendar Exame</option>
+                                    <option value="resultado">Resultado de Exame</option>
+                                    <option value="emergencia">Emergência</option>
+                                    <option value="informacoes">Informações Gerais</option>
+                                    <option value="reclamacao">Reclamação/Sugestão</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensagem *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Descreva sua solicitação ou dúvida..."></textarea>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">Aceito os termos de privacidade e autorizo o contato *</label>
+                                <span class="error-message" id="privacyError"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span class="btn-text">Enviar Mensagem</span>
+                                <span class="btn-loading" style="display: none;">Enviando...</span>
+                            </button>
+                        </form>
+                        
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            <div class="success-icon">✓</div>
+                            <h3>Mensagem enviada com sucesso!</h3>
+                            <p>Obrigado pelo contato. Nossa equipe retornará em breve.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h2>Informações de Contato</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 5 7 1 12 1S21 5 21 10Z" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Endereço</h3>
+                                <p>Rua do Clube, S/N<br>Antas - BA <br>
+                                CEP: 48420-000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92V19.92C22 20.52 21.52 21 20.92 21C10.14 21 2 12.86 2 2.08C2 1.48 2.48 1 3.08 1H6.08C6.68 1 7.16 1.48 7.16 2.08V5.5C7.16 6.1 6.68 6.58 6.08 6.58H4.5C5.5 12.5 11.5 18.5 17.5 19.5V17.92C17.5 17.32 17.98 16.84 18.58 16.84H22C22.6 16.84 23.08 17.32 23.08 17.92Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Telefones</h3>
+                                <p><strong>Recepção:</strong> (75) 99825-6796<br>
+                                <strong>Emergências:</strong> (75) 99825-6796<br>
+                                <strong>Laboratório:</strong> (75) 99825-6796</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>E-mail</h3>
+                                <p><strong>Geral:</strong> contato@saolucas.com.br<br>
+                                <strong>Agendamentos:</strong> agenda@saolucas.com.br<br>
+                                <strong>Resultados:</strong> resultados@saolucas.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Horários de Funcionamento</h3>
+                                <p><strong>Segunda a Sexta:</strong> 7h às 19h<br>
+                                <strong>Sábado:</strong> 8h às 17h<br>
+                                <strong>Domingo:</strong> 8h às 12h<br>
+                                <strong>Emergências:</strong> 24 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Nossa Localização</h2>
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <div class="map-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 5 7 1 12 1S21 5 21 10Z" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>São Lucas</h3>
+                        <p>Rua do Clube, S/N - Centro<br>Antas - BA</p>
+                        <div class="map-features">
+                            <div class="map-feature">
+                                <span>🅿️ Estacionamento gratuito</span>
+                            </div>
+                            <div class="map-feature">
+                                <span>🚇Vizinho ao Hospital <br>
+                                Nossa Senhora de Lourdes</span>
+                            </div>
+                            <div class="map-feature">
+                                <span>♿ Acessibilidade completa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency-section">
+            <div class="container">
+                <div class="emergency-content">
+                    <div class="emergency-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 8V12" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 16H12.01" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="emergency-text">
+                        <h2>Emergências Cardiológicas</h2>
+                        <p>Em caso de emergência cardiológica, ligue imediatamente:</p>
+                        <div class="emergency-phone">
+                            <a href="tel:+5575998256796">(75) 99825-6796</a>
+                        </div>
+                        <p class="emergency-note">Atendimento 24 horas, 7 dias da semana</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                      <img class="logo"  src="imagens/logo.png" alt="">
+                        <span>Saúde e Qualidade ao seu alcance</span>
+                    </div>
+                    <p>Cuidando da sua saúde com excelência e dedicação há mais de 15 anos.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="index.html#servicos">Especialidades Médicas</a></li>
+                        <li><a href="index.html#servicos">Laboratório</a></li>
+                        <li><a href="index.html#servicos">Exames Cardiológicos</a></li>
+                        <li><a href="contato.html">Emergências</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Horários</h4>
+                    <ul>
+                        <li>Segunda a Sexta: 7h às 19h</li>
+                        <li>Sábado: 8h às 17h</li>
+                        <li>Domingo: 8h às 12h</li>
+                        <li>Emergências: 24h</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>(75) 99825-6796</li>
+                        <li>contato@Saolucas.com.br</li>
+                        <li>Rua do Clube, S/N<br>Antas - BA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 São Lucas. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
